@@ -54,15 +54,15 @@
         var choice=[
             {
                 name:'piere',
-                image:'../../public/piere.jpeg'
+                image:'piere.jpeg'
             },
             {
                 name:'papier',
-                image:'../../public/papier.jpeg'
+                image:'papier.jpeg'
             },
             {
                 name:'ciseaux',
-                image:'../../public/ciseaux.jpeg'
+                image:'ciseaux.jpeg'
             }
         ]
 
