@@ -3,8 +3,8 @@
         <div class="container">
             <div class="scope">
                 <div class="btn" style="display: flex; margin: 10px;">
-                    <div class="start" @click="part.istarted=true;">Restart</div>
-                    <div class="start">NewPart</div>
+                    <div class="start" @click="part.istarted=true;">Newpart</div>
+                    <!-- <div class="start">NewPart</div> -->
                     <div style="flex: 2;justify-content: end; display: flex;">{{ part.time }} </div>
                 </div>
                <div class="score" style="display: flex; justify-content: center;
@@ -201,13 +201,10 @@
         cursor: pointer;
     }
 
-    .piere:focus{
+   .user>button:focus{
         background-color: rgb(99, 149, 225);
     }
-    .papier:focus{
-        background-color: rgb(187, 86, 28);
-        
-    }
+   
 
     img{
         height: 50px;
