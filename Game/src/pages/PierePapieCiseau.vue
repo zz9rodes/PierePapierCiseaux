@@ -17,7 +17,8 @@
                          <img src="../assets/Robot.jpeg" alt="">
                     </div>
                 </div>
-                <div class="status">
+                <div class="status" style="display: flex; justify-content: center;
+               align-items: center; margin-top: 50px;" >
                     {{ part.status }}
                 </div>
             </div>
