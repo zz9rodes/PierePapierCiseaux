@@ -24,7 +24,7 @@
                </div>
                     {{ part.status }}
                 <div class="userchoice">
-                    <img :src="part.computerimageChoice" alt="">
+                    <img :src="choice[1].image" alt="">
                </div>
                 </div>
             </div>
@@ -54,15 +54,15 @@
         var choice=[
             {
                 name:'piere',
-                image:'../../public/piere.jpeg'
+                image:'../assets/piere.jpeg'
             },
             {
                 name:'papier',
-                image:'../../public/papier.jpeg'
+                image:'../assets/papier.jpeg'
             },
             {
                 name:'ciseaux',
-                image:'../../public/ciseaux.jpeg'
+                image:'../assets/ciseaux.jpeg'
             }
         ]
 
@@ -94,7 +94,9 @@
                     part.time=part.time+1
                 }
             }
-           
+            // else{
+            //     part.status=null
+            // }
         },1000)   
     }
     startGame()
@@ -130,19 +132,15 @@
             for(let i=0;i<choice.length;i++){
                 console.log('dans la boucle');
                 if(part.userchoice==choice[i].name){
-                    part.userimageChoice=choice[i].image
-                    console.log("image du jouer  "+part.userimageChoice)
-                    for(let j=0;j<choice.length;j++){
-                        if(part.computerchoice==choice[j].name){
-                        part.computerimageChoice=choice[j].image
-                        console.log("image de la machine "+part.computerimageChoice)
+                    part.userimageChoice==choice[i].image
+                    if(part.computerchoice==choice[i].name){
+                        part.computerimageChoice=choice[i].image
+                        console.log("image  "+part.computerimageChoice)
                         break
                     }
                     else{
                         console.log("dans le else");
                     }
-                }
-                   
                }
                else{
                     
