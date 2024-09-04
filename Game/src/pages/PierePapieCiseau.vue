@@ -102,7 +102,7 @@
     const Operation=(params)=>{
         part.status=""
         part.userchoice=params
-        if((part.time<0)){
+        if((!part.time<0)){
             part.istarted=false
             var indexAleatoire = Math.floor(Math.random() * 3);
             part.computerchoice=AllChoice[indexAleatoire]
