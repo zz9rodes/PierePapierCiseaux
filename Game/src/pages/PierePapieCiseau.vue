@@ -67,7 +67,7 @@
         ]
 
      var part=reactive({
-        time:-3,
+        time:10,
         status:"",
         usescore:0,
         computerscore:0,
@@ -85,13 +85,13 @@
         setInterval(()=>{
             if(part.istarted){
                 if(part.time>9 && part.userchoice==null){
-                    part.time=part.time=-3
+                    part.time=part.time=10
                     part.istarted=false
                     part.status="your are lose"
                     console.log("the time is > 10 seconde loseeerr")
                 }
                 else{
-                    part.time=part.time+1
+                    part.time=part.time-1
                 }
             }
            
@@ -102,11 +102,11 @@
     const Operation=(params)=>{
         part.status=""
         part.userchoice=params
-        if((part.time>0)&&(part.time<10)){
+        if((part.time<0)){
             part.istarted=false
             var indexAleatoire = Math.floor(Math.random() * 3);
             part.computerchoice=AllChoice[indexAleatoire]
-
+            part.time=0;
              console.log("le choi du jouer est "+part.userchoice)
              console.log("le choi de la machine est  "+part.computerchoice)
 
@@ -148,7 +148,7 @@
                     
                }
             }
-            part.time=-3
+            part.time=10
            
         }
         else{
