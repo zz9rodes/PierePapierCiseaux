@@ -84,7 +84,7 @@
         console.log(part.istarted);
         setInterval(()=>{
             if(part.istarted){
-                if(part.time>9 && part.userchoice==null){
+                if(part.time<0 && part.userchoice==null){
                     part.time=part.time=10
                     part.istarted=false
                     part.status="your are lose"
